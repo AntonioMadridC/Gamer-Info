@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import GamesView from '../views/GamesView.vue'
+/* import juegos from '../views/GamesView.vue' */
 import GameView from '../views/GameView.vue'
 import notfound from  '@/views/NotFound.vue'
 
@@ -16,7 +16,7 @@ const routes = [
   {
     path: '/juegos',
     name: 'juegos',
-    component: GamesView,
+    component: () => import(/* webpackChunkName: "juegos" */ '../views/GamesView.vue'),
     alias:['/games', '/gaems']
   },
   {
