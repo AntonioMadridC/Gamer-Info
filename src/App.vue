@@ -1,12 +1,20 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <MyNav></MyNav>
     <router-view/>
   </div>
 </template>
+
+<script>
+import MyNav from './components/MyNav.vue'
+
+export default {
+  components:{
+    MyNav,
+  },
+}
+</script>
+
 
 <style>
 #app {
@@ -14,7 +22,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
+  background-color: #2c3e50;
+  background-image: url("https://supportivy.com/wp-content/uploads/2020/08/pixel-art-wallpaper-Idees-designs-photo-6.jpg");
+  background-repeat:repeat;
+  height: 100%;
+  min-height: 100vh;
 }
 
 nav {
@@ -23,7 +36,7 @@ nav {
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 nav a.router-link-exact-active {
